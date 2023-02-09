@@ -1,29 +1,17 @@
-let RandomNumber = Math.floor (Math.random()*3)
 
-function getComputerChoice () {
-    return RandomNumber
-    switch (RandomNumber().getChoice()) { 
+let RandomNumber = Math.floor (Math.random()*3) 
+switch (RandomNumber) { 
         case 0: 
-        choice = "Rock";
+        choice = "Rock"
         break;
         case 1: 
-        choice = "Paper";
+        choice = "Paper"
         break;
         case 2: 
-        choice = "Scissor";
-         }
+        choice = "Scissor"
         }
 
- 
- 
-    
-
-
-
-
-
-
-
-    
-
-
+  
+function getComputerChoice () {
+    return RandomNumber;
+}
