@@ -16,6 +16,7 @@ function getComputerChoice () {
 }
 
 let playerSelection = prompt ("Let's play!! Choose between rock, scissor or paper:")
+// nog uitzoeken hoe ik dit qua hoofdletters moet oppakken //
 console.log ("Your choice is " + playerSelection)
 
 const computerSelection = getComputerChoice ()
