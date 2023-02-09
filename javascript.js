@@ -14,3 +14,10 @@ function getComputerChoice () {
             break;
             };
 }
+
+const computerSelection = getComputerChoice ()
+let playerSelection = prompt ("Do you want Rock, Scissor or Paper?")
+
+
+function playRound (computerSelection, playerSelection) {
+}
