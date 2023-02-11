@@ -4,46 +4,46 @@ function getComputerChoice () {
     let RandomNumber = Math.floor (Math.random()*3) 
     switch (RandomNumber) { 
             case 0: 
-            return "Rock"
+            return "rock"
             break;
             case 1: 
-            return "Paper"
+            return "paper"
             break;
             case 2: 
-            return "Scissor"
+            return "scissor"
             break;
             };
 }
 
-let playerSelection = prompt ("Let's play!! Choose between rock, scissor or paper:")
-// nog uitzoeken hoe ik dit qua hoofdletters moet oppakken //
+let playerSelection = prompt ("Let's play!! Choose between rock, scissor or paper:").toLowerCase()
+
 console.log ("Your choice is " + playerSelection)
 
 const computerSelection = getComputerChoice ()
 console.log ("Computer got " + computerSelection)
 
 function playRound (computerSelection, playerSelection)  {  
-    if (computerSelection === "Paper" && playerSelection === "Rock") {
+    if (computerSelection === "paper" && playerSelection === "rock") {
     return "You lose, paper beats rock"
     }
     
-    else if (computerSelection === "Paper" && playerSelection === "Scissor"){
+    else if (computerSelection === "paper" && playerSelection === "scissor"){
     return "You win, scissor beats paper"
     }
    
-    if (computerSelection === "Rock" && playerSelection === "Paper") {
+    if (computerSelection === "rock" && playerSelection === "paper") {
         return "You win, paper beats rock"
     }
     
-    else if (computerSelection === "Rock" && playerSelection === "Scissor"){
+    else if (computerSelection === "rock" && playerSelection === "scissor"){
         return "You lose, rock beats scissor"
     }
 
-    if (computerSelection === "Scissor" && playerSelection === "Paper") {
+    if (computerSelection === "scissor" && playerSelection === "paper") {
         return "You lose, scissor beats paper"
     }
 
-    else if (computerSelection === "Scissor" && playerSelection === "Rock") {
+    else if (computerSelection === "scissor" && playerSelection === "rock") {
         return "You win, rock beats scissor"
     }
 
