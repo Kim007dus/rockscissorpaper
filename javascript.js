@@ -20,12 +20,6 @@ function getPlayerSelection () {
     return prompt ("Let's play!! Choose between rock, scissor or paper:").toLowerCase()
 }
 
-const playerSelection = getPlayerSelection ()
-const computerSelection = getComputerChoice ()
-
-console.log ("Your choice is " + playerSelection)
-console.log ("Computer got " + computerSelection)
-
 function playRound (computerSelection, playerSelection)  {  
     if (computerSelection === "paper" && playerSelection === "rock") {
         computerScore += 1
@@ -69,12 +63,7 @@ function playRound (computerSelection, playerSelection)  {
   
  }
 
-
-
-const playRoundResult = playRound(computerSelection, playerSelection)
-console.log ("! " + playRoundResult)
-
-for (let i=0; i < 4; i++) {
+for (let i=0; i < 5; i++) {
     
     const playerSelection = getPlayerSelection ()
     const computerSelection = getComputerChoice ()
