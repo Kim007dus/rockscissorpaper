@@ -76,11 +76,24 @@ function playRound (computerSelection, playerSelection)  {
 const playRoundResult = playRound(computerSelection, playerSelection)
 console.log ("! " + playRoundResult)
 
-for (let i=0; i < 5; i++) {
+function Result (playerScore, computerScore){
+    if (playerScore > computerScore) {
+        return "You won the game"
+    }
+    else if (computerScore > playerScore){
+        return "You lose the game"
+    }
+    else (computerScore, playerScore)
+    return "The game ends in a draw!"
+}
+const endResult = Result (playerScore, computerScore)
+
+for (let i=0; i < 4; i++) {
     
     const playerSelection = getPlayerSelection ()
     const computerSelection = getComputerChoice ()
     const playRoundResult = playRound(computerSelection, playerSelection)
+    const endResult = Result (playerScore, computerScore)
 
     console.log ("Your choice is " + playerSelection)
     console.log ("Computer got " + computerSelection)
@@ -90,5 +103,6 @@ for (let i=0; i < 5; i++) {
 console.log ("Computer: " + computerScore)
 console.log ("You: " + playerScore)
 
- 
+
+console.log (endResult)   
 
