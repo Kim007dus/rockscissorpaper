@@ -54,20 +54,25 @@ function playRound(computerSelection, playerSelection) {
 
 let computerChoice = document.querySelector("#computerselection")
 let roundResult = document.querySelector("#roundresult")
+let runningScoreC = document.querySelector("#runningscorecomputer")
+let runningScoreP = document.querySelector("#runningscoreplayer")
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         button.classList.add('playing')
         const playerSelection = button.id
+
         button.classList.add(getComputerSelection())
         const computerSelection = getComputerSelection()
         computerChoice.textContent = computerSelection
-        computerChoice.classList.toggle('reveal')
-       
+               
         button.classList.add(playRound())
         const playerRoundResult = playRound(computerSelection, playerSelection)
         roundResult.textContent = playerRoundResult
-        
+        runningScoreC.textContent = computerScore
+        runningScoreP.textContent = playerScore
+             
+
         setTimeout (
         function stopPlaying () {
             button.classList.remove('playing')
