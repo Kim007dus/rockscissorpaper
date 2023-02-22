@@ -26,6 +26,28 @@ button {
     font-family: Monaco, Lucida Console, monospace;
     color: black;
     font-size: medium;
+    
+    
+}
+
+.block3 {
+    display: flex;
+    justify-content: center;
+    font-family: Monaco, Lucida Console, monospace;
+    color: black;
+    font-size: medium;
+    gap: 50px;
+    margin-top: 25px;
+}
+
+.computer1, .result {
+    padding: 10px;
+} 
+
+.computer2, .player {
+    border: solid black;
+    padding: 10px;
+    background-color: rgb(211, 208, 208);
 }
 
 .playing {

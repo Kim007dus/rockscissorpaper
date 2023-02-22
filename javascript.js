@@ -76,6 +76,19 @@ buttons.forEach((button) => {
         setTimeout (
         function stopPlaying () {
             button.classList.remove('playing')
-        }, 3000)              
+        }, 1000)   
+        
+        if (computerScore === 5) {
+            alert ("You died! -sad-")
+            window.location.reload()
+           }
+           
+        if (playerScore === 5) { 
+            alert ("You won, open the champagne!")
+            window.location.reload()
+          }
+        
+       
     })
 })
+
