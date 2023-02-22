@@ -3,18 +3,29 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    
+
+}
+h2 {
+    font-family: Monaco, Lucida Console, monospace;
+    color: grey;
 }
 
 button {
-height: 370px;
-width: 300px;
-transition:all 0.07s;
-margin: 50px;
+    height: 370px;
+    width: 300px;
+    transition: all 0.07s;
+    margin: 50px;
+    background-color: rgb(211, 208, 208);
 }
 
-
-    
+.block2 {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(211, 208, 208);
+    font-family: Monaco, Lucida Console, monospace;
+    color: black;
+    font-size: medium;
+}
 
 .playing {
     transform: scale(1.1);

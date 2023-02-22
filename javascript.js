@@ -58,21 +58,18 @@ let roundResult = document.querySelector("#roundresult")
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         button.classList.add('playing')
-        const playerSelection = button.id 
+        const playerSelection = button.id
         
-        button.classList.add (getComputerSelection ())
+        button.classList.add(getComputerSelection())
         const computerSelection = getComputerSelection()
         computerChoice.textContent = computerSelection
-        computerChoice.classList.toggle ('reveal')
-        
-        button.classList.add (playRound())
-        const playerRoundResult = playRound (computerSelection, playerSelection)
+        computerChoice.classList.toggle('reveal')
+       
+        button.classList.add(playRound())
+        const playerRoundResult = playRound(computerSelection, playerSelection)
         roundResult.textContent = playerRoundResult
-        roundResult.classList.toggle ('reveal')
+        roundResult.classList.toggle('reveal')
         
-        })
+    })
 
 })
-
-
-
