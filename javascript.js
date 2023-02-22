@@ -52,18 +52,24 @@ function playRound(computerSelection, playerSelection) {
 
 }
 
+let computerChoice = document.querySelector("#computerselection")
+let roundResult = document.querySelector("#roundresult")
+
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         button.classList.add('playing')
         const playerSelection = button.id 
-        console.log ("Your choice is " + playerSelection)
+        
         button.classList.add (getComputerSelection ())
         const computerSelection = getComputerSelection()
-        console.log("Computer got " + computerSelection)
+        computerChoice.textContent = computerSelection
+        computerChoice.classList.toggle ('reveal')
         
         button.classList.add (playRound())
         const playerRoundResult = playRound (computerSelection, playerSelection)
-        console.log (playerRoundResult)
+        roundResult.textContent = playerRoundResult
+        roundResult.classList.toggle ('reveal')
+        
         })
 
 })

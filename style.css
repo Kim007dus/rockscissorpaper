@@ -3,24 +3,22 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
+    
 }
 
 button {
-
-background-color: blueviolet;
+height: 370px;
+width: 300px;
 transition:all 0.07s;
-
+margin: 50px;
 }
 
-.buttons {
+
     
-
-
-}
 
 .playing {
     transform: scale(1.1);
-    border-color: yellow;
-    box-shadow: 0 0 1rem yellow;
+    border-color: black;
+    box-shadow: 0 0 1rem black;
 
 }
