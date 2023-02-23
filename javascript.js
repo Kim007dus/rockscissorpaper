@@ -65,32 +65,31 @@ buttons.forEach((button) => {
 
         button.classList.add(getComputerSelection())
         const computerSelection = getComputerSelection()
-        computerChoice.textContent = computerSelection 
-    
-               
+        computerChoice.textContent = computerSelection
+
+
         button.classList.add(playRound())
         const playerRoundResult = playRound(computerSelection, playerSelection)
         roundResult.textContent = playerRoundResult
         runningScoreC.textContent = computerScore
         runningScoreP.textContent = playerScore
-             
 
-        setTimeout (
-        function stopPlaying () {
-            button.classList.remove('playing')
-        }, 1000)   
-        
+
+        setTimeout(
+            function stopPlaying() {
+                button.classList.remove('playing')
+            }, 1000)
+
         if (computerScore === 5) {
-            alert ("You died! -sad-")
+            alert("You died! -sad-")
             window.location.reload()
-           }
-           
-        if (playerScore === 5) { 
-            alert ("You won, open the champagne!")
+        }
+
+        if (playerScore === 5) {
+            alert("You won, open the champagne!")
             window.location.reload()
-          }
-        
-       
+        }
+
+
     })
 })
-
