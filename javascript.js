@@ -6,43 +6,43 @@ function getComputerSelection() {
     let RandomNumber = Math.floor(Math.random() * 3)
     switch (RandomNumber) {
         case 0:
-            return "rock"
+            return "ROCK"
             break;
         case 1:
-            return "paper"
+            return "PAPER"
             break;
         case 2:
-            return "scissor"
+            return "SCISSORS"
             break;
     };
 }
 
 function playRound(computerSelection, playerSelection) {
-    if (computerSelection === "paper" && playerSelection === "rock") {
+    if (computerSelection === "PAPER" && playerSelection === "rock") {
         computerScore += 1
         return "You lose"
 
-    } else if (computerSelection === "paper" && playerSelection === "scissor") {
+    } else if (computerSelection === "PAPER" && playerSelection === "scissor") {
         playerScore += 1
         return "You win"
 
     }
 
-    if (computerSelection === "rock" && playerSelection === "paper") {
+    if (computerSelection === "ROCK" && playerSelection === "paper") {
         playerScore += 1
         return "You win"
 
-    } else if (computerSelection === "rock" && playerSelection === "scissor") {
+    } else if (computerSelection === "ROCK" && playerSelection === "scissor") {
         computerScore += 1
         return "You lose"
 
     }
 
-    if (computerSelection === "scissor" && playerSelection === "paper") {
+    if (computerSelection === "SCISSORS" && playerSelection === "paper") {
         computerScore += 1
         return "You lose"
 
-    } else if (computerSelection === "scissor" && playerSelection === "rock") {
+    } else if (computerSelection === "SCISSORS" && playerSelection === "rock") {
         playerScore += 1
         return "You win"
 
@@ -57,6 +57,7 @@ let roundResult = document.querySelector("#roundresult")
 let runningScoreC = document.querySelector("#runningscorecomputer")
 let runningScoreP = document.querySelector("#runningscoreplayer")
 
+
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         button.classList.add('playing')
@@ -64,7 +65,8 @@ buttons.forEach((button) => {
 
         button.classList.add(getComputerSelection())
         const computerSelection = getComputerSelection()
-        computerChoice.textContent = computerSelection
+        computerChoice.textContent = computerSelection 
+    
                
         button.classList.add(playRound())
         const playerRoundResult = playRound(computerSelection, playerSelection)
